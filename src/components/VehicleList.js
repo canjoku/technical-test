@@ -1,33 +1,23 @@
-import React, { Component } from 'react';
-import { getData } from '../api';
+import React, { Component } from 'react'
+import Xe from '../components/Xe'
+import Xf from '../components/Xf'
+import Xj from '../components/Xj'
+import Fpace from '../components/Fpace'
+import Ftype from '../components/Ftype'
+
 
 export default
 class VehicleList extends Component {
 
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			data: null
-		}
-	}
-
-	componentDidMount() {
-		getData((data) => {
-			this.setState({
-				data
-			})
-		});
-	}
-
 	render() {
-		if(this.state.data) {
-			console.log(this.state.data);
-		    return (
-			    <h1>Hello World</h1>
-		    )
-	    }
-
-		return (<h1>Loading...</h1>);
+		return (
+			<div>
+				<Xe />
+				<Xf />
+				<Xj />
+				<Fpace />
+				<Ftype />
+			</div>
+		)
 	}
 }
