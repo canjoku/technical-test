@@ -6,6 +6,14 @@ const source = require('vinyl-source-stream');
 const sass = require('gulp-sass');
 const mocha = require('gulp-mocha');
 const server = require('gulp-develop-server');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
+cleanCSS = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const uglify = require('gulp-uglify');
 
 gulp.task('js', function () {
    return browserify({entries: './src/app.js', extensions: ['.js'], debug: true})

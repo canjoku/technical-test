@@ -1,5 +1,5 @@
-$bg-colour: #ccc;
+@import "../src/scss/base/b-variables";
+@import "../src/scss/base/b-body";
+@import "../src//scss/components/c-vehicles";
+@import '../src//scss/components/c-vehicle-list';
 
-body {
-	background-color: $bg-colour;
-}
