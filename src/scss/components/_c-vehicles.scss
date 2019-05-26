@@ -1,18 +1,33 @@
 @import '../mixins/m-media';
 
 
-.c-vehicle {
-
+.c-vehicle-card {
   &__img {
-    width: 20rem; 
-    background-color: red;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 15%;
 
     @include mediaMd {
-      background-color: blue;
+      width: 25%;
     }
+  }
 
-    @include mediaLg {
-      background-color: goldenrod;
-    }
+  &__information {
+    background-color: red;
+    width: 40%;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  &__price {
+    font-size: 1rem;
+  }
+
+  &__description {
+    font-size: 0.9rem;
   }
 }

@@ -1,0 +1,11 @@
+.vehicle-list-container {
+  display: grid;
+
+  @include mediaMd {
+    grid-template-columns: 50% 50%
+  }
+
+  &__vehicle {
+
+  }
+}
