@@ -1,8 +1,11 @@
-.vehicle-list-container {
-  display: grid;
+.c-vehicle-list-container {
+  display: flex;
+  flex-direction: column;
 
   @include mediaMd {
-    grid-template-columns: 50% 50%
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
 
   &__vehicle {
