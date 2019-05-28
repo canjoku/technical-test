@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getXeData } from '../api/index'
 
 
 export default
@@ -13,13 +14,11 @@ class Xe extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9988/api/vehicle/xe")
-		.then(res => res.json())
-		.then((data) => {
+		getXeData((data) => {
 			this.setState({
 				data
 			})
-		})
+		});
 	}
 
 	render() {

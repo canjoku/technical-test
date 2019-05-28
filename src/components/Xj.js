@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getXjData } from '../api/index'
+
 
 
 export default
@@ -13,13 +15,11 @@ class Xj extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9988/api/vehicle/xj")
-		.then(res => res.json())
-		.then((data) => {
+		getXjData((data) => {
 			this.setState({
 				data
 			})
-		})
+		});
 	}
 
 	render() {

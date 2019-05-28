@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getXfData } from '../api/index'
+
 
 
 export default
@@ -13,13 +15,11 @@ class Xf extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9988/api/vehicle/xf")
-		.then(res => res.json())
-		.then((data) => {
+		getXfData((data) => {
 			this.setState({
 				data
 			})
-		})
+		});
 	}
 
 	render() {

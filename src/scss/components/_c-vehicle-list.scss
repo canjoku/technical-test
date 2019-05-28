@@ -1,14 +1,12 @@
 .c-vehicle-list-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   @include mediaMd {
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  &__vehicle {
-
+  @include mediaLg{
+    grid-template-columns: repeat(3, 1fr)
   }
+
 }

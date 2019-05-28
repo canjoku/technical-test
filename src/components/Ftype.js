@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getFtypeData } from '../api/index'
+
 
 
 export default
@@ -13,13 +15,11 @@ class Ftype extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9988/api/vehicle/ftype")
-		.then(res => res.json())
-		.then((data) => {
+		getFtypeData((data) => {
 			this.setState({
 				data
 			})
-		})
+		});
 	}
 
 	render() {

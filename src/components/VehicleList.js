@@ -12,11 +12,11 @@ class VehicleList extends Component {
 	render() {
 		return (
 			<div className='c-vehicle-list-container'>
-				<Xe className='c-vehicle-list-container__vehicle'/>
-				<Xf className='c-vehicle-list-container__vehicle'/>
-				<Xj className='c-vehicle-list-container__vehicle'/>
-				<Fpace className='c-vehicle-list-container__vehicle'/>
-				<Ftype className='c-vehicle-list-container__vehicle'/>
+				<Xe/>
+				<Xf />
+				<Xj />
+				<Fpace />
+				<Ftype />
 			</div>
 		)
 	}

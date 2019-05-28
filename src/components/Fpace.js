@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getFpaceData } from '../api/index'
+
 
 
 
@@ -14,13 +16,11 @@ class Fpace extends Component {
 	}
 
 	componentDidMount() {
-		fetch("http://localhost:9988/api/vehicle/fpace")
-		.then(res => res.json())
-		.then((data) => {
+		getFpaceData((data) => {
 			this.setState({
 				data
 			})
-		})
+		});
 	}
 
 	render() {
